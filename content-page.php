@@ -7,12 +7,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		// Post thumbnail.
-		twentyfifteen_post_thumbnail();
-	?>
+		selimtheme_post_thumbnail();
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+		selimtheme_post_title();
+	?>
 
 	<div class="entry-content">
 		<?php the_content(); ?>

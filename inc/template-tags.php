@@ -4,9 +4,6 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 
 if ( ! function_exists( 'twentyfifteen_comment_nav' ) ) :
@@ -171,7 +168,7 @@ function twentyfifteen_category_transient_flusher() {
 add_action( 'edit_category', 'twentyfifteen_category_transient_flusher' );
 add_action( 'save_post',     'twentyfifteen_category_transient_flusher' );
 
-if ( ! function_exists( 'twentyfifteen_post_thumbnail' ) ) :
+if ( ! function_exists( 'selimtheme_post_thumbnail' ) ) :
 /**
  * Display an optional post thumbnail.
  *
@@ -180,27 +177,48 @@ if ( ! function_exists( 'twentyfifteen_post_thumbnail' ) ) :
  *
  * @since Twenty Fifteen 1.0
  */
-function twentyfifteen_post_thumbnail() {
+function selimtheme_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
-
-	if ( is_singular() ) :
 	?>
 
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
-	</div><!-- .post-thumbnail -->
+	<div class="title-banner font-size-controller" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+					<?php
+						the_title( '<h1>', '</h1>' );
+						if (strlen(get_the_subtitle()) > 0) :
+							the_subtitle( '<p class="subtitle">', '</p>' );
+						endif;
+					?>
+                </div>
+            </div>
+        </div>
+    </div>
+	<?php
+}
+endif;
 
-	<?php else : ?>
+if ( ! function_exists( 'selimtheme_post_titile' ) ) :
+/**
+ * Display an optional post thumbnail.
+ *
+ * Wraps the post thumbnail in an anchor element on index views, or a div
+ * element when on single views.
+ *
+ * @since Twenty Fifteen 1.0
+ */
+function selimtheme_post_title() {
+	if (!( post_password_required() || is_attachment() || ! has_post_thumbnail() )) {
+		return;
+	}
 
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php
-			the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) );
-		?>
-	</a>
-
-	<?php endif; // End is_singular()
+    the_title( '<h1>', '</h1>' );
+	if (strlen(get_the_subtitle()) > 0) :
+		the_subtitle( '<p class="subtitle">', '</p>' );
+	endif;
 }
 endif;
 
