@@ -88,12 +88,12 @@ h3 {
                 width: 3em;
             }
             @media (min-width: @screen-md-min) and (max-width: @screen-md-max){
-                margin: 2em 3em 2em 0;
+                margin: 2em 3em 2.2em 0;
                 width: 8em;
             }
             @media (min-width: @screen-lg-min){
                 width: 10em;
-                margin: 2.5em 4em 2.5em 0;
+                margin: 2.5em 4em 2.8em 0;
             }
         }
 
@@ -237,15 +237,16 @@ h1 {
 
 	small {
 		color: #999;
-		font-size: 65%;
+		font-size: 1%*@subtitle-scale;
 	}
 }
 
 .subtitle {
 	color: #999;
-	font-size: 0.65*@font-size-28;
-	margin-top: -1em;
+	font-size: @font-size-28*@subtitle-scale;
+	margin-top: -0.8em;
 	margin-bottom: 3em;
+	line-height: 1;
 }
 
 
@@ -507,8 +508,8 @@ ul.spaced {
 	}
 
 	small .plate, .subtitle .plate {
-		padding: 0.47em;
-		margin: -0.47em;
+		padding: 0.3em/@subtitle-scale;
+		margin: -0.3em/@subtitle-scale;
 	}
 
 	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
