@@ -188,9 +188,9 @@ function selimtheme_post_thumbnail() {
             <div class="row">
                 <div class="col-xs-12">
 					<?php
-						the_title( '<h1>', '</h1>' );
-						if (strlen(get_the_subtitle()) > 0) :
-							the_subtitle( '<p class="subtitle">', '</p>' );
+						the_title( '<h1><span class="plate">', '</span></h1>' );
+						if (strlen(get_the_subtitle( get_the_ID() , '' , '', false)) > 0) :
+							the_subtitle( '<p class="subtitle"><span class="plate">', '</span></p>' );
 						endif;
 					?>
                 </div>
@@ -216,9 +216,10 @@ function selimtheme_post_title() {
 	}
 
     the_title( '<h1>', '</h1>' );
-	if (strlen(get_the_subtitle()) > 0) :
-		the_subtitle( '<p class="subtitle">', '</p>' );
+	if (strlen(get_the_subtitle( get_the_ID() , '' , '', false)) > 0) :
+		the_subtitle( '<p class="subtitle"><span class="plate">', '</span></p>' );
 	endif;
+
 }
 endif;
 
