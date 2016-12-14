@@ -6646,31 +6646,31 @@ ul.spaced:before {
 }
 @media (max-width: 991px) {
   .footer-container {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#555555+0,555555+33,484848+33,555555+50,484848+100 */
-    background: #555555;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@footer-light-gray+0,555555+33,484848+33,555555+50,484848+100 */
+    background: #666;
     /* Old browsers */
-    background: -moz-linear-gradient(top, #555555 0%, #555555 30%, #484848 30%, #484848 100%);
+    background: -moz-linear-gradient(top, #666 0%, #666 30%, #555 30%, #555 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #555555 0%, #555555 30%, #484848 30%, #484848 100%);
+    background: -webkit-linear-gradient(top, #666 0%, #666 30%, #555 30%, #555 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #555555 0%, #555555 30%, #484848 30%, #484848 100%);
+    background: linear-gradient(to bottom, #666 0%, #666 30%, #555 30%, #555 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#484848', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@footer-light-gray', endColorstr='@footer-dark-gray', GradientType=0);
     /* IE6-9 */
   }
 }
 @media (min-width: 992px) {
   .footer-container {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#555555+0,555555+75,484848+76,484848+100 */
-    background: #555555;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@footer-light-gray+0,555555+75,484848+76,484848+100 */
+    background: #666;
     /* Old browsers */
-    background: -moz-linear-gradient(left, #555555 0%, #555555 75%, #484848 76%, #484848 100%);
+    background: -moz-linear-gradient(left, #666 0%, #666 75%, #555 76%, #555 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #555555 0%, #555555 75%, #484848 76%, #484848 100%);
+    background: -webkit-linear-gradient(left, #666 0%, #666 75%, #555 76%, #555 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #555555 0%, #555555 75%, #484848 76%, #484848 100%);
+    background: linear-gradient(to right, #666 0%, #666 75%, #555 76%, #555 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#484848', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@footer-light-gray', endColorstr='@footer-dark-gray', GradientType=1);
     /* IE6-9 */
   }
 }
@@ -6702,7 +6702,7 @@ ul.spaced:before {
 }
 @media (min-width: 992px) {
   .footer-container .left-column {
-    background-color: #555555;
+    background-color: #666;
     text-align: left;
   }
 }
@@ -6717,7 +6717,7 @@ ul.spaced:before {
 }
 @media (min-width: 992px) {
   .footer-container .right-column {
-    background-color: #484848;
+    background-color: #555;
     text-align: right;
   }
 }
