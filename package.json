@@ -1,0 +1,36 @@
+{
+  "name": "selim",
+  "version": "1.0.0",
+  "description": "selimlab website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrstepanov/selim.git"
+  },
+  "keywords": [
+    "selimlab",
+    "selim"
+  ],
+  "author": "Petr Stepanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petrstepanov/selim/issues"
+  },
+  "homepage": "https://github.com/petrstepanov/selim#readme",
+  "devDependencies": {
+    "bricks.js": "^1.3.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-cache-bust": "^1.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-image-resize": "^0.8.0",
+    "gulp-less": "^3.0.5",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^1.5.1"
+  }
+}
