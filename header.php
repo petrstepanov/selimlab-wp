@@ -22,8 +22,8 @@
                     <div class="col-xs-12">
                         <div class="selim-navbar">
                             <a href="<?php bloginfo( 'wpurl' );?>" title="Go Home">
-                                <img class="visible-xs visible-md visible-lg logo" src="<?php bloginfo('template_directory');?>/img/logo-horizontal-smaller.png" alt="SelimLab Logo Horizontal"/>
-                                <img class="visible-sm logo" src="<?php bloginfo('template_directory');?>/img/logo-vertical-smaller.png" alt="SelimLab Logo Vertical"/>
+                                <img class="visible-xs visible-md visible-lg logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo-horizontal-smaller.png" alt="SelimLab Logo Horizontal"/>
+                                <img class="visible-sm logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo-vertical-smaller.png" alt="SelimLab Logo Vertical"/>
                                 <!-- <img class="visible-md logo" src="<?php bloginfo('template_directory');?>/img/logo-vertical.png" alt="SelimLab Logo Vertical Smaller"/> -->
                             </a>
                             <a class="toggle-menu js-toggle-menu" href="#">

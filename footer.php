@@ -1,34 +1,52 @@
 <?php
 /**
  * The template for displaying the footer
- *
- * Contains the closing of the "site-content" div and all content after.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 ?>
 
-	</div><!-- .site-content -->
+<div class="spacer-4em"></div>
+<div class="footer-container font-size-controller">
+    <footer class="container">
+        <div class="col-xs-12 col-md-8 left-column">
+            <img src="<?php bloginfo('template_directory');?>/img/selimlab-logo-grayscale.png" class="hidden-xs hidden-sm logo-grayscale" />
+            <nav class="flex space-between">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Welcome</a>
+                <a href="<?php echo esc_url( home_url( '/research' ) ); ?>">Research</a>
+                <a href="<?php echo esc_url( home_url( '/s-w-doppler-parameters-software' ) ); ?>">Software</a>
+                <a href="<?php echo esc_url( home_url( '/facilities' ) ); ?>">Facilities</a>
+                <a href="<?php echo esc_url( home_url( '/publications' ) ); ?>">Publications</a>
+                <a href="<?php echo esc_url( home_url( '/teaching' ) ); ?>">Teaching</a>
+                <a href="<?php echo esc_url( home_url( '/people' ) ); ?>">People</a>
+            </nav>
+        </div>
+        <div class="col-xs-12 col-md-4 right-column">
+            <a href="http://www.nsf.gov/" rel="nofollow">
+                <svg class="icon"><use xlink:href="<?php bloginfo('template_directory');?>/img/icons.svg#icon-nsf-logo"></use></svg><br />
+                <span>National Science<br class="hidden-xs hidden-sm" /> Foundation</span>
+            </a>
+            <a href="http://www.airforce.com/" rel="nofollow">
+                <svg class="icon"><use xlink:href="<?php bloginfo('template_directory');?>/img/icons.svg#icon-airforce-logo"></use></svg><br />
+                <span>United States<br class="hidden-xs hidden-sm" /> Air Force</span>
+            </a>
+        </div>
+    </footer>
+</div>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php
-				/**
-				 * Fires before the Twenty Fifteen footer text for footer customization.
-				 *
-				 * @since Twenty Fifteen 1.0
-				 */
-				do_action( 'twentyfifteen_credits' );
-			?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfifteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfifteen' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
-	</footer><!-- .site-footer -->
+<?php $scriptsMinified = true; ?>
 
-</div><!-- .site -->
-
-<?php wp_footer(); ?>
-
+<?php if ($scriptsMinified == true){ ?>
+    <script src="<?php bloginfo('template_directory');?>/js/selimlab.min.js"></script>
+<?php } else { ?>
+    <script src="<?php bloginfo('template_directory');?>/js/vendor/jquery.js"></script>
+    <script src="<?php bloginfo('template_directory');?>/js/vendor/bootstrap.js"></script>
+    <script src="<?php bloginfo('template_directory');?>/js/main.js"></script>
+<?php } ?>
+<?php
+   /* Always have wp_footer() just before the closing </body>
+    * tag of your theme, or you will break many plugins, which
+    * generally use this hook to reference JavaScript files.
+    */
+    wp_footer();
+?>
 </body>
 </html>
