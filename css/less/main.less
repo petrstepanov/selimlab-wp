@@ -20,6 +20,18 @@ html {
 	min-height: 4em;
 }
 
+.fixed-height {
+	margin-bottom: 4em;
+
+	@media (min-width: @screen-sm-min){
+		min-height: 15em;
+	}
+}
+
+.fixed-height-sm {
+	margin-bottom: 4em;
+}
+
 .person-details {
 	font-size: @font-size-37;
 
@@ -252,6 +264,9 @@ h1 {
 
 
 h2 {
+	@media (max-width: @screen-xs-max){
+		margin-top: 2em/@font-size-21;
+	}
 	font-size: @font-size-21;
 	margin-top: 3em/@font-size-21;
 	margin-bottom: 1.5em/@font-size-21;
@@ -259,7 +274,7 @@ h2 {
 
 h3 {
 	font-size: @font-size-16;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	margin-top: 2em/@font-size-21;
 }
