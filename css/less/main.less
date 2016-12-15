@@ -21,6 +21,7 @@ html {
 }
 
 .fixed-height {
+	margin-top: 1em;
 	margin-bottom: 4em;
 
 	@media (min-width: @screen-sm-min){
@@ -29,16 +30,26 @@ html {
 }
 
 .fixed-height-sm {
+	margin-top: 1em;
 	margin-bottom: 4em;
 }
 
 .person-details {
-	font-size: @font-size-37;
+	display: flex;
+	align-items: center;
 
-	.email {
-		font-size: 0.46em;
-	    vertical-align: middle;
-	    margin-left: 1em;
+	a {
+		margin-left: 1em/@font-size-37;
+
+		img {
+			width: @tap-size;
+			height: @tap-size;
+			margin: 0.75em 0;
+		}
+
+		&.email {
+			margin-left: 1em;
+		}
 
 		&:first-child {
 			margin-left: 0;
@@ -276,7 +287,7 @@ h3 {
 	font-size: @font-size-16;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
-	margin-top: 2em/@font-size-21;
+	margin-top: 2.5em/@font-size-16;
 }
 
 h4 {
@@ -285,6 +296,12 @@ h4 {
 
 p {
 	margin: 0.5em 0;
+
+	&.padding-right {
+		@media (min-width: @screen-md-min){
+			padding-right: 1.5em;
+		}
+	}
 }
 
 .entry-content > p:first-child{
@@ -417,6 +434,18 @@ ul.spaced {
     span {
 
     }
+}
+
+// Figures
+
+figcaption {
+	margin: 1em 0 2em 0;
+
+	.phd &{
+		@media (min-width: @screen-md-min) and (max-width: @screen-md-max){
+			min-height: 12em;
+		}
+	}
 }
 
 // Footer
@@ -633,29 +662,29 @@ ul.spaced {
 
 .number-brick {
 	background-color: #f5f5f5;
-	display: block;
-	min-height: 9em;
-	padding: 1em;
+	display: flex;
+	padding: 0.75em 1.8em;
+	align-items: center;
+	margin-top: 2em;
 
 	@media (min-width: @screen-md-min) and (max-width: @screen-md-max){
-		padding: 2em;
+		// padding: 2em;
 	}
 
 	@media (min-width: @screen-lg-min){
-		padding: 3em;
+		// padding: 3em;
 	}
 
 	.number {
 		font-family: @font-display;
-		font-size: @font-size-50;
-		text-align: center;
-		display: block;
+		font-size: @font-size-37;
+		margin-right: 1.5em/@font-size-37;
 	}
 	.text {
+		font-size: @font-size-12;
+		font-weight: bold;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		text-align: center;
-		display: block;
 	}
 }
 
