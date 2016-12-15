@@ -59,7 +59,7 @@ function twentyfifteen_setup() {
 	set_post_thumbnail_size( 825, 510, true );
 
 	/* petrstepanov: Disable auto add paragraphs */
-	remove_filter( 'the_content', 'wpautop' );
+	// /* remove_filter( 'the_content', 'wpautop' ); */
 
 	/* petrstepanov: Hide admin bar */
 	add_filter('show_admin_bar', '__return_false');

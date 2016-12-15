@@ -34,12 +34,12 @@
 }
 @media (max-width: 767px) {
   .font-size-controller {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .font-size-controller {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
 @media (min-width: 992px) and (max-width: 1280px) {
@@ -2641,7 +2641,7 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 2em;
+  padding-top: 1.5em;
   font-size: 16px;
   line-height: 1.6;
   color: #555555;
@@ -2649,8 +2649,8 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 29px;
-  padding: 1em 2em;
+  height: 28px;
+  padding: 0.5em 1em;
   font-size: 16px;
   line-height: 1.6;
   color: #555555;
@@ -2701,7 +2701,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 29px;
+    line-height: 28px;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -2790,8 +2790,8 @@ fieldset[disabled] .checkbox label {
   cursor: not-allowed;
 }
 .form-control-static {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   margin-bottom: 0;
   min-height: 41px;
 }
@@ -2878,7 +2878,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 36.25px;
+  padding-right: 35px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2886,9 +2886,9 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 29px;
-  height: 29px;
-  line-height: 29px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   text-align: center;
   pointer-events: none;
 }
@@ -3064,11 +3064,11 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 2em;
+  padding-top: 1.5em;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 27px;
+  min-height: 26.5px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -3078,7 +3078,7 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 2em;
+    padding-top: 1.5em;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3107,7 +3107,7 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   font-size: 16px;
   line-height: 1.6;
   border-radius: 0.25em;
@@ -4037,7 +4037,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 .input-group-addon {
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   font-size: 16px;
   font-weight: normal;
   line-height: 1;
@@ -4510,8 +4510,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 10.5px;
-  margin-bottom: 10.5px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4596,8 +4596,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 10.5px;
-  margin-bottom: 10.5px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 .navbar-btn.btn-sm {
   margin-top: 13.1875px;
@@ -4863,7 +4863,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   line-height: 1.6;
   text-decoration: none;
   color: #337ab7;
@@ -6312,9 +6312,6 @@ html {
 .person-details .email:first-child {
   margin-left: 0;
 }
-h3 {
-  padding-top: 2em;
-}
 .selim-navbar-container {
   background-color: #f5f5f5;
   position: relative;
@@ -6359,21 +6356,21 @@ h3 {
 }
 @media (max-width: 767px) {
   .selim-navbar-container .selim-navbar .logo {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    width: 5em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    width: 7em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .selim-navbar-container .selim-navbar .logo {
-    margin-top: 1.8em;
+    margin-top: 1em;
     margin-bottom: 0.5em;
-    width: 3em;
+    width: 4em;
   }
 }
 @media (min-width: 992px) and (max-width: 1280px) {
   .selim-navbar-container .selim-navbar .logo {
-    margin: 2em 3em 2.2em 0;
+    margin: 1em 3em 1.1em 0;
     width: 8em;
   }
 }
@@ -6386,7 +6383,8 @@ h3 {
 .selim-navbar-container .selim-navbar .navigation {
   flex-grow: 2;
   text-align: right;
-  margin: 2em 0;
+  margin-top: 1em;
+  margin-bottom: 1.2em;
   padding: 0;
 }
 @media (max-width: 767px) {
@@ -6396,7 +6394,7 @@ h3 {
     margin: 0;
     border-top: 2px solid rgba(0, 0, 0, 0.08);
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -6531,16 +6529,32 @@ h1 small {
   margin-bottom: 3em;
   line-height: 1;
 }
+@media (max-width: 767px) {
+  .subtitle {
+    margin-bottom: 1.5em;
+  }
+}
 h2 {
-  font-size: 1.75em;
-  margin-top: 1.71428571em;
-  margin-bottom: 0.85714286em;
+  font-size: 1.3125em;
+  margin-top: 2.28571429em;
+  margin-bottom: 1.14285714em;
 }
 h3 {
-  font-size: 1.3125em;
+  font-size: 1em;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+  margin-top: 1.52380952em;
 }
 h4 {
   font-size: 1em;
+}
+p {
+  margin: 0.5em 0;
+}
+@media (min-width: 768px) {
+  .entry-content > p:first-child {
+    margin-top: 2em;
+  }
 }
 .sidebar .icon {
   width: 1.5em;
@@ -6771,14 +6785,29 @@ ul.spaced:before {
   padding: 0.46153846em;
   margin: -0.46153846em;
 }
+@media (max-width: 767px) {
+  .title-banner {
+    background-image: none !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .title-banner {
-    min-height: 17em;
+    min-height: 15em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .title-banner {
+    min-height: 15em;
   }
 }
 @media (min-width: 992px) {
   .title-banner {
-    min-height: 22em;
+    min-height: 17em;
+  }
+}
+@media (min-width: 992px) and (max-height: 640px) {
+  .title-banner {
+    min-height: 13em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {

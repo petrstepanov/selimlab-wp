@@ -34,10 +34,6 @@ html {
 	}
 }
 
-h3 {
-	padding-top: 2em;
-}
-
 .selim-navbar-container {
     background-color: @whitesmoke;
     position: relative;
@@ -78,17 +74,17 @@ h3 {
 
         .logo {
             @media (max-width: @screen-xs-max){
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
-                width: 5em;
+                margin-top: 0.8em;
+                margin-bottom: 0.8em;
+                width: 7em;
             }
             @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
-                margin-top: 1.8em;
+                margin-top: 1em;
                 margin-bottom: 0.5em;
-                width: 3em;
+                width: 4em;
             }
             @media (min-width: @screen-md-min) and (max-width: @screen-md-max){
-                margin: 2em 3em 2.2em 0;
+                margin: 1em 3em 1.1em 0;
                 width: 8em;
             }
             @media (min-width: @screen-lg-min){
@@ -100,7 +96,8 @@ h3 {
         .navigation {
             flex-grow: 2;
             text-align: right;
-            margin: 2em 0;
+            margin-top: 1em;
+			margin-bottom: 1.2em;
             padding: 0;
 
 			@media (max-width: @screen-xs-max){
@@ -109,7 +106,7 @@ h3 {
             	margin: 0;
 				border-top: 2px solid rgba(0,0,0,0.08);
 				padding-top: 1em;
-				padding-bottom: 1em;
+				padding-bottom: 0.5em;
 			}
 
             @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
@@ -245,23 +242,40 @@ h1 {
 	color: #999;
 	font-size: @font-size-28*@subtitle-scale;
 	margin-top: -0.8em;
+
+	@media (max-width: @screen-xs-max){
+		margin-bottom: 1.5em;
+	}
 	margin-bottom: 3em;
 	line-height: 1;
 }
 
 
 h2 {
-	font-size: @font-size-28;
-	margin-top: 3em/@font-size-28;
-	margin-bottom: 1.5em/@font-size-28;
+	font-size: @font-size-21;
+	margin-top: 3em/@font-size-21;
+	margin-bottom: 1.5em/@font-size-21;
 }
 
 h3 {
-	font-size: @font-size-21;
+	font-size: @font-size-16;
+	text-transform: capitalize;
+	letter-spacing: 0.2em;
+	margin-top: 2em/@font-size-21;
 }
 
 h4 {
 	font-size: @font-size-16;
+}
+
+p {
+	margin: 0.5em 0;
+}
+
+.entry-content > p:first-child{
+	@media (min-width: @screen-sm-min){
+		margin-top: 2em;
+	}
 }
 
 .sidebar {
@@ -512,11 +526,24 @@ ul.spaced {
 		margin: -0.3em/@subtitle-scale;
 	}
 
+	@media (max-width: @screen-xs-max){
+		background-image: none !important;
+	}
+
 	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+		min-height: 15em;
+	}
+
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+		min-height: 15em;
+	}
+
+	@media (min-width: @screen-md-min){
 		min-height: 17em;
 	}
-	@media (min-width: @screen-md-min){
-		min-height: 22em;
+
+	@media (min-width: @screen-md-min) and (max-height: @macbook-13-height){
+		min-height: 13em;
 	}
 
 	&.lab {

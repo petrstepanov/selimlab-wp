@@ -197,7 +197,6 @@ function selimtheme_post_thumbnail() {
             </div>
         </div>
     </div>
-	<div class="spacer-2em font-size-controller"></div>
 	<?php
 }
 endif;
