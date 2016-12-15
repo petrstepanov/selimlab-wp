@@ -22,11 +22,11 @@
         <div class="col-xs-12 col-md-4 right-column">
             <a href="http://www.nsf.gov/" rel="nofollow">
                 <svg class="icon"><use xlink:href="<?php bloginfo('template_directory');?>/img/icons.svg#icon-nsf-logo"></use></svg><br />
-                <span>National Science<br class="hidden-xs hidden-sm" /> Foundation</span>
+                <span>National Science<br class="hidden-sm" /> Foundation</span>
             </a>
             <a href="http://www.airforce.com/" rel="nofollow">
                 <svg class="icon"><use xlink:href="<?php bloginfo('template_directory');?>/img/icons.svg#icon-airforce-logo"></use></svg><br />
-                <span>United States<br class="hidden-xs hidden-sm" /> Air Force</span>
+                <span>United States<br class="hidden-sm" /> Air Force</span>
             </a>
         </div>
     </footer>

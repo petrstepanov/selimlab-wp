@@ -296,7 +296,10 @@ p {
 }
 
 .welcome-img {
-    margin-top: -3em;
+	margin-top: 2em;
+	@media (min-width: @screen-md-min){
+		margin-top: -3em;
+	}
     width: 100%;
     margin-bottom: 1.5em;
 	border-radius: 0.3125em;
@@ -407,9 +410,9 @@ ul.spaced {
 	@media (max-width: @screen-sm-max){
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@footer-light-gray+0,555555+33,484848+33,555555+50,484848+100 */
 		background: @footer-light-gray; /* Old browsers */
-		background: -moz-linear-gradient(top,  @footer-light-gray 0%, @footer-light-gray 30%, @footer-dark-gray 30%, @footer-dark-gray 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(top,  @footer-light-gray 0%,@footer-light-gray 30%,@footer-dark-gray 30%,@footer-dark-gray 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to bottom,  @footer-light-gray 0%,@footer-light-gray 30%,@footer-dark-gray 30%,@footer-dark-gray 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		background: -moz-linear-gradient(top,  @footer-light-gray 0%, @footer-light-gray 28%, @footer-dark-gray 28%, @footer-dark-gray 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  @footer-light-gray 0%,@footer-light-gray 28%,@footer-dark-gray 28%,@footer-dark-gray 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  @footer-light-gray 0%,@footer-light-gray 28%,@footer-dark-gray 28%,@footer-dark-gray 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@footer-light-gray', endColorstr='@footer-dark-gray',GradientType=0 ); /* IE6-9 */
 	}
 
@@ -423,16 +426,16 @@ ul.spaced {
 	}
 
 	.left-column, .right-column {
-		padding: 3em 0 2em 0;
+		padding: 1em 0;
+
 		@media (max-width: @screen-sm-max){
-			padding: 2em 0;
 			text-align: center;
 		}
 
 		a {
 			font-weight: bold;
 			color: white;
-			font-size: 0.75em;
+			font-size: 0.85em;
 			opacity: 0.4;
 			.transition(opacity @fast ease-in);
 
@@ -444,14 +447,39 @@ ul.spaced {
 	}
 
 	.left-column {
-		@media (min-width: @screen-md-min){
-			background-color: @footer-light-gray;
-			text-align: left;
+		@media (min-width: @screen-sm-min){
+			padding: 1.5em 0;
+		}
+
+		@media (min-width: @screen-sm-min){
+			padding-top: 3em;
 		}
 
 		.logo-grayscale {
 			height: 5em;
 			margin-bottom: 1.75em;
+		}
+
+		a {
+			margin: 0.3em 1em;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@media (min-width: @screen-md-min){
+			background-color: @footer-light-gray;
+			text-align: left;
+		}
+
+		@media (max-width: @screen-xs-max){
+			.flex {
+				justify-content: center;
+				flex-wrap: wrap;
+			}
 		}
 
 		@media (min-width: @screen-md-min){
@@ -462,6 +490,8 @@ ul.spaced {
 	}
 
 	.right-column {
+		padding: 2em 0 2em 0;
+
 		@media (min-width: @screen-md-min){
 			background-color: @footer-dark-gray;
 			text-align: right;
