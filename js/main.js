@@ -3,6 +3,8 @@ $(document).ready(function() {
     $('.js-toggle-menu').click(function() {
         $('.js-navigation').slideToggle("fast", "easeOutCubic");
     });
+    // Chocolat gallery
+    $('.chocolat-parent').Chocolat();    
 });
 
 // Smooth Scroll

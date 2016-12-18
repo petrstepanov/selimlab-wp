@@ -7,11 +7,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php echo get_bloginfo( 'name' ); ?></title>
         <meta name="description" content="<?php echo get_bloginfo( 'description' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/selimlab.css?t=1481825035667">
+        <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/selimlab.css?t=1481835779972">
         <link rel="shortcut icon" href="favicon.ico">
         <?php wp_head(); ?>
     </head>

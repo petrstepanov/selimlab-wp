@@ -32,13 +32,15 @@
     </footer>
 </div>
 
-<?php $scriptsMinified = true; ?>
+<?php $scriptsMinified = false; ?>
 
 <?php if ($scriptsMinified == true){ ?>
     <script src="<?php bloginfo('template_directory');?>/js/selimlab.min.js"></script>
 <?php } else { ?>
-    <script src="<?php bloginfo('template_directory');?>/js/vendor/jquery.js"></script>
-    <script src="<?php bloginfo('template_directory');?>/js/vendor/bootstrap.js"></script>
+    <script src="<?php bloginfo('template_directory');?>/bower_components/jquery/dist/jquery.js"></script>
+    <script src="<?php bloginfo('template_directory');?>/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="<?php bloginfo('template_directory');?>/bower_components/salvattore/dist/salvattore.js"></script>
+    <script src="<?php bloginfo('template_directory');?>/bower_components/chocolat/dist/js/jquery.chocolat.js"></script>
     <script src="<?php bloginfo('template_directory');?>/js/main.js"></script>
 <?php } ?>
 <?php
