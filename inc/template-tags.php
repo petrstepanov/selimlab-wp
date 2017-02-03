@@ -191,6 +191,10 @@ function selimtheme_post_thumbnail() {
 	if ( is_front_page() ) {
 		return;
 	}
+	// if a page with no thumbnail - exit
+	if (is_single() && is_page()){
+		return;
+	}
 	?>
 
 	<div class="title-banner <?php if (is_single() && !is_page()){echo "is_post";} if (has_post_thumbnail()){echo " has_thumbnail";} else {echo " no_thumbnail";} ?> font-size-controller" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">

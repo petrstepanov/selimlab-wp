@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article data-class="content-page.php" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		// Post thumbnail.
 		selimtheme_post_thumbnail();
@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 
-				<?php selimtheme_post_title(); ?>
+				<?php if (is_front_page()){ selimtheme_post_title(); } ?>
 
 				<div class="entry-content">
 					<?php the_content(); ?>

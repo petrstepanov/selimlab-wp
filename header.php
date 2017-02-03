@@ -10,7 +10,7 @@
         <meta name="description" content="<?php echo get_bloginfo( 'description' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/selimlab.css?t=1486123219063">
+        <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/selimlab.css?t=1486128873708">
         <link rel="shortcut icon" href="favicon.ico">
         <?php wp_head(); ?>
     </head>
