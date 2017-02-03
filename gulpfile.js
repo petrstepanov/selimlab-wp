@@ -19,7 +19,6 @@ gulp.task('scripts', function() {
             './bower_components/bootstrap/dist/js/bootstrap.js',
             './bower_components/salvattore/dist/salvattore.js',
             './bower_components/chocolat/dist/js/jquery.chocolat.js',
-            './js/jquery-easing-effects.js',
             './js/main.js'
         ])
         .pipe(plumber()) // prevents breaking and has to go first here
