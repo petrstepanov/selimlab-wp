@@ -565,6 +565,10 @@ figcaption {
 		font-style: italic;
 		font-size: @font-size-12;
 		font-weight: bold;
+
+		&:last-child {
+			margin-bottom: 3em;
+		}
 	}
 
 	p {
@@ -619,25 +623,31 @@ figcaption {
 		margin: -0.3em/@subtitle-scale;
 	}
 
-	@media (max-width: @screen-xs-max){
-		// background-image: none !important;
-		min-height: 10em;
+	&.no-thumbnail {
+		background-color: @blue;
 	}
 
-	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
-		min-height: 15em;
-	}
+	&.has_thumbnail {
+		@media (max-width: @screen-xs-max){
+			// background-image: none !important;
+			min-height: 10em;
+		}
 
-	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
-		min-height: 15em;
-	}
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+			min-height: 15em;
+		}
 
-	@media (min-width: @screen-md-min){
-		min-height: 17em;
-	}
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+			min-height: 15em;
+		}
 
-	@media (min-width: @screen-md-min) and (max-height: @macbook-13-height){
-		min-height: 13em;
+		@media (min-width: @screen-md-min){
+			min-height: 17em;
+		}
+
+		@media (min-width: @screen-md-min) and (max-height: @macbook-13-height){
+			min-height: 13em;
+		}
 	}
 
 	&.lab {

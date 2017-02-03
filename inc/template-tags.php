@@ -190,7 +190,7 @@ function selimtheme_post_thumbnail() {
 	}
 	?>
 
-	<div class="title-banner <?php if (is_single() && !is_page()){echo "is_post";} ?> font-size-controller" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
+	<div class="title-banner <?php if (is_single() && !is_page()){echo "is_post";} if (has_post_thumbnail()){echo " has_thumbnail";} else {echo " no_thumbnail";} ?> font-size-controller" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-10 col-md-8">
