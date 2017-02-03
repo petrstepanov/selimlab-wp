@@ -7264,25 +7264,35 @@ p {
   border: 2px solid #cccccc;
 }
 ul.spaced,
-ol.spaced {
+ol.spaced,
+.post ol,
+.post ul {
   position: relative;
   padding-left: 2em;
 }
 ul.spaced.plain,
-ol.spaced.plain {
+ol.spaced.plain,
+.post ol.plain,
+.post ul.plain {
   list-style-type: none;
   padding-left: 0;
 }
 ul.spaced.plain:before,
-ol.spaced.plain:before {
+ol.spaced.plain:before,
+.post ol.plain:before,
+.post ul.plain:before {
   display: none;
 }
 ul.spaced.plain li,
-ol.spaced.plain li {
+ol.spaced.plain li,
+.post ol.plain li,
+.post ul.plain li {
   padding-left: 0;
 }
 ul.spaced:before,
-ol.spaced:before {
+ol.spaced:before,
+.post ol:before,
+.post ul:before {
   content: "";
   position: absolute;
   left: 0;
@@ -7293,7 +7303,9 @@ ol.spaced:before {
   z-index: 100;
 }
 ul.spaced li,
-ol.spaced li {
+ol.spaced li,
+.post ol li,
+.post ul li {
   padding-left: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -7513,7 +7525,7 @@ figcaption {
   margin-bottom: 3em;
 }
 .title-banner .post-buttonbar {
-  margin: 2em 0 2.5em 0;
+  margin: 2.2em 0 2.7em 0;
 }
 .title-banner p.subtitle {
   margin-top: -0.85em;
@@ -7523,7 +7535,7 @@ figcaption {
   padding: 0.46153846em;
   margin: -0.46153846em;
 }
-.title-banner.no-thumbnail {
+.title-banner.no_thumbnail {
   background-color: #65a9d2;
 }
 @media (max-width: 767px) {

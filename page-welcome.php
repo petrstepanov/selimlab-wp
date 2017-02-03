@@ -15,9 +15,15 @@ get_header(); ?>
         $post_id = $post["ID"];
         $content = get_post_field('post_content', $post_id);
         $pieces = explode("<!--more-->", $content);
+        $post_thumbnail_url = get_the_post_thumbnail_url($post_id, 'full');
         ?>
 
-        <aside class="title-banner"  style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>)">
+        <aside
+            <?php if(strlen($post_thumbnail_url) > 0) {
+                echo "style='background-image: url(" . $post_thumbnail_url .")' class='title-banner has_thumbnail'";
+            } else {
+                echo "class='title-banner no_thumbnail'";
+            } ?>>
             <div class="container font-size-controller">
                 <div class="row">
                     <div class="col-xs-12 col-sm-10 col-md-8">

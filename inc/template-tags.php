@@ -185,7 +185,10 @@ if ( ! function_exists( 'selimtheme_post_thumbnail' ) ) :
  * @since Twenty Fifteen 1.0
  */
 function selimtheme_post_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+	if ( post_password_required() || is_attachment()) {
+		return;
+	}
+	if ( is_front_page() ) {
 		return;
 	}
 	?>
