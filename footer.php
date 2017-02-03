@@ -6,7 +6,7 @@
 
 <div class="spacer-4em"></div>
 <div class="footer-container font-size-controller">
-    <footer class="container">
+    <div class="website-footer container">
         <div class="col-xs-12 col-md-8 left-column">
             <img src="<?php bloginfo('template_directory');?>/img/selimlab-logo-grayscale.png" class="hidden-xs hidden-sm logo-grayscale" />
             <nav class="flex space-between">
@@ -29,7 +29,7 @@
                 <span>United States<br class="hidden-sm" /> Air Force</span>
             </a>
         </div>
-    </footer>
+    </div>
 </div>
 
 <?php $scriptsMinified = false; ?>

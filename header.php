@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="selim-navbar-container">
-            <header class="container">
+            <div class="website-header container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="selim-navbar">
@@ -40,5 +40,5 @@
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
         </div>
