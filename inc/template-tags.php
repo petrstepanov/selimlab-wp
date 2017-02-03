@@ -71,21 +71,24 @@ function twentyfifteen_entry_meta() {
 			get_the_modified_date()
 		);
 
-		printf( '<p class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></p>',
-			_x( 'Posted on', 'Used before publish date.', 'twentyfifteen' ),
-			esc_url( get_permalink() ),
-			$time_string
-		);
+		// printf( '<p class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></p>',
+		// 	_x( 'Posted on', 'Used before publish date.', 'twentyfifteen' ),
+		// 	esc_url( get_permalink() ),
+		// 	$time_string
+		// );
 	}
 
 	if ( 'post' == get_post_type() ) {
-		if ( is_singular() || is_multi_author() ) {
-			printf( '<p class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span></p>',
-				_x( 'Author', 'Used before post author name.', 'twentyfifteen' ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				get_the_author()
-			);
-		}
+
+		// Petr Stepanov: remove post Author
+
+		// if ( is_singular() || is_multi_author() ) {
+		// 	printf( '<p class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span></p>',
+		// 		_x( 'Author', 'Used before post author name.', 'twentyfifteen' ),
+		// 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		// 		get_the_author()
+		// 	);
+		// }
 
 		$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
 		if ( $categories_list && twentyfifteen_categorized_blog() ) {
@@ -196,6 +199,17 @@ function selimtheme_post_thumbnail() {
 						if (strlen(get_the_subtitle( get_the_ID() , '' , '', false)) > 0) :
 							the_subtitle( '<p class="subtitle"><span class="plate">', '</span></p>' );
 						endif;
+
+						// if it's a post
+						if (is_single() && !is_page()){
+							echo "<p class='post-date'>" . get_the_date('F j, Y', $post_id) . "</p>";
+
+							$post_id = $post["ID"];
+							$content = get_post_field('post_content', $post_id);
+							$pieces = explode("<!--more-->", $content);
+
+							echo "<p class='post-excerpt'>" . $pieces[0] . "</p>";
+						}
 					?>
                 </div>
             </div>

@@ -42,7 +42,14 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'content', get_post_format() );
+
+				// Petr Stepanov: call special page for blog
+				if ( !is_front_page() && is_home() ) {
+					get_template_part( 'content', 'blog' );
+				}
+				else {
+					get_template_part( 'content', get_post_format() );
+				}
 
 			// End the loop.
 			endwhile;

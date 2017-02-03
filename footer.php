@@ -5,7 +5,7 @@
 ?>
 
 <div class="spacer-4em"></div>
-<div class="footer-container font-size-controller">
+<div class="footer-container">
     <div class="website-footer container">
         <div class="col-xs-12 col-md-8 left-column">
             <img src="<?php bloginfo('template_directory');?>/img/selimlab-logo-grayscale.png" class="hidden-xs hidden-sm logo-grayscale" />

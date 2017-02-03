@@ -17,17 +17,17 @@ get_header(); ?>
         $pieces = explode("<!--more-->", $content);
         ?>
 
-        <aside class="news-container"  style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>)">
+        <aside class="title-banner"  style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>)">
             <div class="container font-size-controller">
                 <div class="row">
                     <div class="col-xs-12 col-sm-10 col-md-8">
                         <h2><?php echo $post["post_title"]; ?></h2>
                         <p class="post-date"><?php echo get_the_date('F j, Y', $post_id); ?></p>
                         <p class="post-excerpt"><?php echo $pieces[0]; ?></p>
-                        <p class="post-buttonbar">
+                        <div class="post-buttonbar">
                             <a class="btn btn-success" href="<?php echo get_permalink($post_id); ?>">Learn More</a>
-                            <a class="btn" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Visit Our Blog</a>
-                        </p>
+                            <a class="btn btn-default" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Visit Our Blog</a>
+                        </div>
                     </div>
                 </div>
             </div>
