@@ -213,10 +213,9 @@ hr {
 	background-position: center center;
 	background-size: cover;
 
-	@textblue:   #1f3541;
-
 	h2 {
-	//	margin-top: 2.6em/@font-size-28;
+		margin-top: 3em/@font-size-28;
+		margin-bottom: 1.5em/@font-size-28;
 		color: @textblue;
 		font-size: @font-size-28;
 	}
@@ -635,6 +634,13 @@ figcaption {
 		padding: 0.3em;
 		margin: -0.3em;
 		display: inline-block;
+	}
+
+	&.is_post {
+		.plate {
+			background-color: transparent;
+			color: @textblue;
+		}
 	}
 
 	small .plate, .subtitle .plate {

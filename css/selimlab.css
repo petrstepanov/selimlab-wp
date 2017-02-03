@@ -7107,6 +7107,8 @@ hr {
   background-size: cover;
 }
 .news-container h2 {
+  margin-top: 1.71428571em;
+  margin-bottom: 0.85714286em;
   color: #1f3541;
   font-size: 1.75em;
 }
@@ -7492,6 +7494,10 @@ figcaption {
   padding: 0.3em;
   margin: -0.3em;
   display: inline-block;
+}
+.title-banner.is_post .plate {
+  background-color: transparent;
+  color: #1f3541;
 }
 .title-banner small .plate,
 .title-banner .subtitle .plate {

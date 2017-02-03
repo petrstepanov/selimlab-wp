@@ -58,9 +58,11 @@ function twentyfifteen_entry_meta() {
 	if ( in_array( get_post_type(), array( 'post', 'attachment' ) ) ) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
+		// Petr Stepanov: remove updated time
+
+		// if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		// 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		// }
 
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
@@ -69,7 +71,7 @@ function twentyfifteen_entry_meta() {
 			get_the_modified_date()
 		);
 
-		printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+		printf( '<p class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></p>',
 			_x( 'Posted on', 'Used before publish date.', 'twentyfifteen' ),
 			esc_url( get_permalink() ),
 			$time_string
@@ -78,7 +80,7 @@ function twentyfifteen_entry_meta() {
 
 	if ( 'post' == get_post_type() ) {
 		if ( is_singular() || is_multi_author() ) {
-			printf( '<span class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span></span>',
+			printf( '<p class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span></p>',
 				_x( 'Author', 'Used before post author name.', 'twentyfifteen' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				get_the_author()
@@ -87,7 +89,7 @@ function twentyfifteen_entry_meta() {
 
 		$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
 		if ( $categories_list && twentyfifteen_categorized_blog() ) {
-			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+			printf( '<p class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</p>',
 				_x( 'Categories', 'Used before category names.', 'twentyfifteen' ),
 				$categories_list
 			);
@@ -95,7 +97,7 @@ function twentyfifteen_entry_meta() {
 
 		$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+			printf( '<p class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</p>',
 				_x( 'Tags', 'Used before tag names.', 'twentyfifteen' ),
 				$tags_list
 			);
@@ -117,7 +119,9 @@ function twentyfifteen_entry_meta() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentyfifteen' ), get_the_title() ) );
+
+		// Petr Stepanov: remove "Leave Comment"
+		// comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentyfifteen' ), get_the_title() ) );
 		echo '</span>';
 	}
 }
@@ -183,10 +187,10 @@ function selimtheme_post_thumbnail() {
 	}
 	?>
 
-	<div class="title-banner font-size-controller" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
+	<div class="title-banner <?php if (is_single() && !is_page()){echo "is_post";} ?> font-size-controller" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-10 col-md-8">
 					<?php
 						the_title( '<h1><span class="plate">', '</span></h1>' );
 						if (strlen(get_the_subtitle( get_the_ID() , '' , '', false)) > 0) :

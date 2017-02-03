@@ -15,24 +15,24 @@ get_header(); ?>
         $post_id = $post["ID"];
         $content = get_post_field('post_content', $post_id);
         $pieces = explode("<!--more-->", $content);
-
         ?>
-        <div class="news-container"  style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>)">
+
+        <aside class="news-container"  style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>)">
             <div class="container font-size-controller">
                 <div class="row">
                     <div class="col-xs-12 col-sm-10 col-md-8">
                         <h2><?php echo $post["post_title"]; ?></h2>
                         <p class="post-date"><?php echo get_the_date('F j, Y', $post_id); ?></p>
                         <p class="post-excerpt"><?php echo $pieces[0]; ?></p>
-                        <?php get_template_part( 'content', get_post_format() ); ?>
                         <p class="post-buttonbar">
                             <a class="btn btn-success" href="<?php echo get_permalink($post_id); ?>">Learn More</a>
-                            <a class="btn" href="<?php echo winwar_get_post_page_url(); ?>">Visit Our Blog</a>
+                            <a class="btn" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Visit Our Blog</a>
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
+        </aside>
+
         <?php
     }
     wp_reset_query();
