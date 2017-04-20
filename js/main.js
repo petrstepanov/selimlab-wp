@@ -1,10 +1,22 @@
 $(document).ready(function() {
     // Mobile menu
     $('.js-toggle-menu').click(function() {
-        $('.js-navigation').slideToggle("fast");
-    });
+        $('.js-navigation').slideToggle("fast")
+    })
     // Chocolat gallery
-    $('.chocolat-parent').Chocolat();
+    $('.chocolat-parent').Chocolat()
+    // // MathJax Settings
+    // // Enable inline math delimiters
+    // MathJax.Hub.Config({
+    //   tex2jax: {
+    //     inlineMath: [['$','$'], ['\\(','\\)']],
+    //     processEscapes: true
+    //   }
+    // })
+    // // Automatic Equation Numbering
+    // MathJax.Hub.Config({
+    //   TeX: { equationNumbers: { autoNumber: "AMS" } }
+    // })
 });
 
 // Smooth Scroll

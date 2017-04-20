@@ -50,5 +50,22 @@
     */
     wp_footer();
 ?>
+<script type="text/x-mathjax-config">
+// MathJax Settings
+if (MathJax){
+  // Enable inline math delimiters
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  })
+  // Automatic Equation Numbering
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+  })
+}
+
+</script>
 </body>
 </html>
