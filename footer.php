@@ -32,7 +32,7 @@
     </div>
 </div>
 
-<?php $scriptsMinified = false; ?>
+<?php $scriptsMinified = true; ?>
 
 <?php if ($scriptsMinified == true){ ?>
     <script src="<?php bloginfo('template_directory');?>/js/selimlab.min.js"></script>
