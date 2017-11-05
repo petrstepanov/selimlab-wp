@@ -25,10 +25,10 @@ function person_shortcode( $atts, $content = null ) {
   }
 
   $html .= '<figcaption>';
-  $html .= '  <strong>' . $name . '</strong><br />';
+  $html .= '  <p><strong>' . $name . '</strong></p>';
 
   if (!empty($content)){
-    $html .= $content;
+    $html .= '<p><small>' . $content . '</small></p>';
   }
 
   $html .= '<p class="person-details">';
@@ -77,10 +77,10 @@ function pi_shortcode( $atts, $content = null ) {
   }
 
   $html .= '<figcaption class="col-sm-6 col-md-8 col-lg-9">';
-  $html .= '  <strong>' . $name . '</strong><br />';
+  $html .= '  <p><strong>' . $name . '</strong></p>';
 
   if (!empty($content)){
-    $html .= $content;
+    $html .= '<p>' . $content . '</p>';
   }
 
   $html .= '<p class="person-details">';
