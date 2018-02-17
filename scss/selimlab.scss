@@ -1,0 +1,13 @@
+/*!
+ * Main SCSS file that imports everything
+ */
+
+@import "variables";
+@import "bootstrap";
+@import "main";
+
+@import "components/navbar";
+@import "components/jumbotron";
+@import "components/buttons";
+
+@import "line-awesome"

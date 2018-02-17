@@ -35,7 +35,7 @@
 <?php $scriptsMinified = true; ?>
 
 <?php if ($scriptsMinified == true){ ?>
-    <script src="<?php bloginfo('template_directory');?>/js/selimlab.min.js"></script>
+    <script src="<?php bloginfo('template_directory');?>/js/site.js"></script>
 <?php } else { ?>
     <script src="<?php bloginfo('template_directory');?>/bower_components/jquery/dist/jquery.js"></script>
     <script src="<?php bloginfo('template_directory');?>/bower_components/bootstrap/dist/js/bootstrap.js"></script>

@@ -10,9 +10,9 @@
 		selimtheme_post_thumbnail();
 	?>
 
-	<div class="container font-size-controller">
+	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-12">
 
 				<?php if (is_front_page()){ selimtheme_post_title(); } ?>
 

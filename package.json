@@ -31,6 +31,15 @@
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-uglify": "^1.5.1"
+    "gulp-uglify": "^1.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.23.6",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jquery": "^3.3.1",
+    "line-awesome": "github:icons8/line-awesome"
   }
 }
